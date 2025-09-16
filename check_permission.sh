@@ -2,11 +2,11 @@
 path="$1"
 permission="$2"
 if [ $# -ne 2 ]; then
-    echo "Invalid arugument!"
+    echo "Invalid argument!"
     exit
 fi
-echo "Path is: $path"
-echo "permission is: $permission"
+#/echo "Path is: $path"
+#/echo "permission is: $permission"
 
 find $path -type f,d
 if [ $? -eq 0 ]; then
