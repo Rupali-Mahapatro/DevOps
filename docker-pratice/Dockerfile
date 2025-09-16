@@ -1,9 +1,14 @@
-from python:3.8-slim
-# Set working directory
+# Use a lightweight Python image
+FROM amazonlinux:2
+
+# Set working directory inside container
 WORKDIR /app
 
-# Copy all files to container
-COPY . .
+# Copy your HTML file into the container
+COPY test.html /app/
 
-# Start a simple HTTP server on port 5000
-CMD ["python", "-m", "http.server", "5000"]
+# Expose port 8080
+EXPOSE 8080
+
+# Run a simple amazon linux HTTP server on port 8080
+#/CMD ["amazonlinux:2", "-m", "http.server", "8080"]
